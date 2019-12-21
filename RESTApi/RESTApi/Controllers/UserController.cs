@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
+using Application.Interfaces;
+using Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace REST.API.Controllers
@@ -11,6 +9,13 @@ namespace REST.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IUserApplication _userApplication;
+
+        public UserController(IUserApplication userApplication)
+        {
+            _userApplication = userApplication;
+        }
+
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -18,9 +23,9 @@ namespace REST.API.Controllers
         }
 
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public UserViewModel Get(long id)
         {
-            return "value";
+            return _userApplication.FindByIdAsync(id);
         }
 
         [HttpPost]

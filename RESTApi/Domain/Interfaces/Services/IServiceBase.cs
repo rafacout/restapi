@@ -6,9 +6,9 @@ namespace Domain.Interfaces.Services
 {
     public interface IServiceBase<T> where T : class
     {
-        T GetById(int id);
+        T FindById(long id);
 
-        IEnumerable<T> GetAll();
+        IEnumerable<T> FindAll();
 
         T Insert(T obj);
 

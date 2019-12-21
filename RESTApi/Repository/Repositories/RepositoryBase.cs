@@ -23,12 +23,12 @@ namespace Data.Repositories
             _context.SaveChanges();
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> FindAll()
         {
             return _context.Set<T>().ToList();
         }
 
-        public virtual T GetById(long id)
+        public virtual T FindById(long id)
         {
             return _context.Set<T>().Find(id);
         }

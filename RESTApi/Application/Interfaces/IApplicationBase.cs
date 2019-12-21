@@ -7,9 +7,9 @@ namespace Application.Interfaces
 {
     public interface IApplicationBase<T>
     {
-        Task<T> InserirAsync(T input);
-        Task<T> AlterarAsync(long id, T obj);
-        Task<bool> DeletarAsync(long id);
-        Task<T> SelecionarPorIdAsync(long id);
+        T InsertAsync(T input);
+        T UpdateAsync(long id, T obj);
+        bool DeleteAsync(long id);
+        T FindByIdAsync(long id);
     }
 }

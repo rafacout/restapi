@@ -8,9 +8,9 @@ namespace Domain.Interfaces.Repositories
     {
         void Add(T obj);
 
-        T GetById(long id);
+        T FindById(long id);
 
-        IEnumerable<T> GetAll();
+        IEnumerable<T> FindAll();
 
         void Update(T obj);
 

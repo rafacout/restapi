@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces.Services;
+﻿using Domain.Interfaces.Repositories;
+using Domain.Interfaces.Services;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,27 @@ namespace Domain.Services
 {
     public class UserService : IUserService
     {
-        public IEnumerable<User> GetAll()
+        private readonly IUserRepository _userRepository;
+
+        public UserService(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
+
+        public IEnumerable<User> FindAll()
         {
             throw new NotImplementedException();
         }
 
-        public User GetById(int id)
+        public User FindById(long id)
         {
-            throw new NotImplementedException();
+            //return _userRepository.FindById(id);
+            return new User() {
+                Id = 1, 
+                FirstName = "Rafael",
+                LastName = "Coutinho",
+                UserName = "rafacout"
+            };
         }
 
         public User Insert(User obj)

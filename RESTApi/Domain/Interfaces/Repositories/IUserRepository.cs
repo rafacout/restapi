@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.Interfaces.Repositories
 {
-    interface IUserRepository : IRepositoryBase<User>
+    public interface IUserRepository : IRepositoryBase<User>
     {
     }
 }
