@@ -22,6 +22,11 @@ namespace Application.Application
             throw new NotImplementedException();
         }
 
+        public IEnumerable<UserViewModel> FindAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public UserViewModel FindByIdAsync(long id)
         {
             var user = new UserViewModel();
@@ -44,7 +49,7 @@ namespace Application.Application
             throw new NotImplementedException();
         }
 
-        public UserViewModel UpdateAsync(long id, UserViewModel obj)
+        public UserViewModel UpdateAsync(UserViewModel obj)
         {
             throw new NotImplementedException();
         }

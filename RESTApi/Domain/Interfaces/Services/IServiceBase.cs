@@ -14,6 +14,6 @@ namespace Domain.Interfaces.Services
 
         T Update(T obj);
 
-        void Remove(T obj);
+        bool Remove(long id);
     }
 }

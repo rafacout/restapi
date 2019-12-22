@@ -33,9 +33,9 @@ namespace Data.Repositories
             return _context.Set<T>().Find(id);
         }
 
-        public virtual void Remove(T obj)
+        public virtual void Remove(long id)
         {
-            _context.Set<T>().Remove(obj);
+            //_context.Set<T>().Remove(id);
             _context.SaveChanges();
         }
 

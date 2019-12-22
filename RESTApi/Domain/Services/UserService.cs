@@ -37,7 +37,7 @@ namespace Domain.Services
             throw new NotImplementedException();
         }
 
-        public void Remove(User obj)
+        public bool Remove(long id)
         {
             throw new NotImplementedException();
         }

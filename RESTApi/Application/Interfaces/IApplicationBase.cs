@@ -7,9 +7,10 @@ namespace Application.Interfaces
 {
     public interface IApplicationBase<T>
     {
-        T InsertAsync(T input);
-        T UpdateAsync(long id, T obj);
+        T InsertAsync(T obj);
+        T UpdateAsync(T obj);
         bool DeleteAsync(long id);
         T FindByIdAsync(long id);
+        IEnumerable<T> FindAll();
     }
 }

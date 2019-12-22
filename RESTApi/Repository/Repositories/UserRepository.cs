@@ -7,31 +7,7 @@ using System.Text;
 
 namespace Data.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository
     {
-        public void Add(User obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<User> FindAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public User FindById(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(User obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(User obj)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

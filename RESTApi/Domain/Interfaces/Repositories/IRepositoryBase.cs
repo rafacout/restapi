@@ -14,6 +14,6 @@ namespace Domain.Interfaces.Repositories
 
         void Update(T obj);
 
-        void Remove(T obj);
+        void Remove(long id);
     }
 }

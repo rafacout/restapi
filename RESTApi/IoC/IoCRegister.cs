@@ -32,7 +32,7 @@ namespace IoC
         
         private static void RegisterRepository(IServiceCollection services)
         {
-            services.AddScoped<IUserRepository, UserRepository>();
+            //services.AddScoped<IUserRepository, UserRepository>();
         }
 
     }
